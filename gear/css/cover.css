@@ -1,0 +1,53 @@
+html, body {
+	height:100%;
+}
+
+body {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+
+.content{
+	width:100%;
+	top: 0px;
+	position: absolute;
+}
+
+.panel{
+	min-width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-top: -150%;
+	position: absolute;
+	background: #fff;
+	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+	z-index: 2;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+.panel:target{
+	margin-top: 0%;
+	background:#fff;
+}
+
+#one:target ~ #link-one,
+#two:target ~ #link-two,
+#three:target ~ #link-three,
+#four:target ~ #link-four,
+#five:target ~ #link-five,
+#six:target ~ #link-six,
+{
+	background: #000;
+	color: #fff;
+}
+
+button a {
+	text-decoration: none;
+	color:#fff;
+}
+

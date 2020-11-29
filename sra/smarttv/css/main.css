@@ -1,0 +1,23 @@
+body{
+		background:url(../images/bg.jpg) top center #000;
+		background-repeat: no-repeat;
+		background-size: 2000px 1161px;
+		font-family: 'Roboto', Arial;
+		font-size: 90%;
+	}
+
+select {
+		font-family: Roboto, Arial;
+		width:auto;
+		font-size:14px;
+	}
+
+#accordion {
+	width:100%;
+	margin:0px auto;
+}
+
+main {
+	width:960px;
+	margin:0px auto;
+}

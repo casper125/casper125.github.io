@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content ="ruoxu wang">
+<title>Condition 5</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.css" >
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/star.css" />
+<link rel="stylesheet" type="text/css" href="css/switch.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<script> 
+//click Action's dropdown menu --> star rating
+$( document ).ready(function() {
+  // Handler for .ready() called.
+    $('select').change(function(){
+        var day = +($('.day').find(":selected").val());
+        var night = +($('.night').find(":selected").val());
+        var late = +($('.late').find(":selected").val());
+        value = day + night + late;
+        if (value == 0) {$("#rating6").prop("checked", false);}
+        if (value == 0) {$("#rating7").prop("checked", false);}
+        if (value == 0) {$("#rating8").prop("checked", false);}
+        if (value == 0) {$("#rating9").prop("checked", false);}
+        if (value == 0) {$("#rating10").prop("checked", false);}
+        if (value == 1) {$("#rating6").prop("checked", true);}
+        if (value > 1 && value <= 3) {$("#rating7").prop("checked", true);}
+        if (value > 3 && value <= 5) {$("#rating8").prop("checked", true);}
+        if (value > 5 && value <= 7) {$("#rating9").prop("checked", true);}
+        if (value > 7 && value <=9) {$("#rating10").prop("checked", true);}
+    });
+});
+</script>
+
+</head>
+<body>
+
+<main>
+
+<form id="contactForm" method="post" action="redirect_post.php">
+    <input id="starttime" type="hidden" name="starttime" value='<?php echo date("H:i:s"); ?>' />
+    <input id="dcondition" type="hidden" name="dcondition" value="5" />
+    <input id="ResponseID_pre" type="hidden" name="ResponseID_pre" value='<?php echo $_GET["ResponseID_pre"]; ?>' />
+
+<!--logo -->
+<table style ="width:100%; margin:0px auto;">
+<tr>
+<td style ="float:left;">
+<img src ="images/logo.png" />
+</td>
+
+<td style ="color:#fff; text-align:center; width:100px;">
+<h4>  
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var month = currentTime.getMonth() + 1
+var day = currentTime.getDate()
+var year = currentTime.getFullYear()
+document.write(month + "/" + day + "/" + year)
+//-->
+</script>
+</h4>
+</td>
+
+<td style ="color:#fff; text-align:center; width:100px;">
+<h4>
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var hours = currentTime.getHours()
+var minutes = currentTime.getMinutes()
+if (minutes < 10){
+minutes = "0" + minutes
+}
+document.write(hours + ":" + minutes + " ")
+if(hours > 11){
+document.write("PM")
+} else {
+document.write("AM")
+}
+//-->
+</script>
+</h4>
+</td>
+
+<td style ="color:#fff; text-align:center; width:100px;">
+<h4>
+80°F
+</h4>
+</td>
+</tr>
+</table>
+<!-- end of logo -->
+
+<!-- Description -->
+<table width ="100%;">
+<tr>
+<td cellpadding ="20" style ="color:#fff;">
+The TV requests access to your program watching data for personalized recommendations.<br /><br />
+Please set your privacy preferences for information disclosure:<br />
+<b><u>None:</u></b> no information at all; <b><u>Low:</u></b> a small amount of information; <b><u>Medium:</u></b> a moderate amount of information; <b><u>High:</u></b> full information.</p>
+</td>
+</tr>
+</table>
+
+<!-- Accordion -->
+<div id="accordion">
+
+<!-- level 1 -->
+    <h3>Program Watching Time</h3>
+
+    <div style ="padding:40px;">
+
+<table style ="float:right;">
+<tr>
+<td>    
+<h3>Recommendation Accuracy:</h3>
+</td>
+<td>
+<div class="starRating">
+  <div>
+    <div>
+      <div>
+        <div>
+          <input id="rating6" type="radio" name="rating1" value="1" disabled ="disabled">
+          <label for="rating6"><span>1</span></label>
+        </div>
+        <input id="rating7" type="radio" name="rating1" value="2" disabled ="disabled">
+        <label for="rating7"><span>2</span></label>
+      </div>
+      <input id="rating8" type="radio" name="rating1" value="3" disabled ="disabled">
+      <label for="rating8"><span>3</span></label>
+    </div>
+    <input id="rating9" type="radio" name="rating1" value="4" disabled ="disabled">
+    <label for="rating9"><span>4</span></label>
+  </div>
+  <input id="rating10" type="radio" name="rating1" value="5" disabled ="disabled">
+    <label for="rating10"><span>5</span></label>
+  </div>
+</td>
+</tr>
+</table>
+
+    <table width ="100%" cellpadding ="10">
+    <tr>
+    <td width ="60%">Daytime (6:00am - 4:30pm)</td>
+    
+    <td>
+    Level of information disclosure:
+    <select class ="day" id ="control2" name ="control2">
+    <option value ="0">None</option>
+    <option value ="1">Low</option>
+    <option value ="2">Median</option>
+    <option value ="3">High</option>
+    </select>
+    </td>
+
+    </tr>
+
+    <tr>
+    <td>Early Night (4:30pm - 10:00pm)</td> 
+    
+    <td>
+    Level of information disclosure:
+    <select class ="night" id ="control3" name ="control3">
+    <option value ="0">None</option>
+    <option value ="1">Low</option>
+    <option value ="2">Median</option>
+    <option value ="3">High</option>
+    </select>
+    </td>
+
+    </tr>
+
+     <tr>
+    <td>Late Night (10:00pm - 2:00am)</td> 
+    
+    <td>
+    Level of information disclosure:
+    <select class ="late" id ="control4" name ="control4">
+    <option value ="0">None</option>
+    <option value ="1">Low</option>
+    <option value ="2">Median</option>
+    <option value ="3">High</option>
+    </select>
+    </td>
+
+    </tr>
+
+    </table>
+
+    </div>
+
+</div>
+
+<input disabled style ="float:right; margin-top:20px; background:#2779aa; color:#fff; font-weight:bold; width:100px; height:40px; font-size:16px; border:none; border-radius: 5px;" type="submit" class="button" value="Next" />
+
+</form>
+
+</main>
+
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+<script>
+
+$( "#accordion" ).accordion();
+
+var availableTags = [
+    "ActionScript",
+    "AppleScript",
+    "Asp",
+    "BASIC",
+    "C",
+    "C++",
+    "Clojure",
+    "COBOL",
+    "ColdFusion",
+    "Erlang",
+    "Fortran",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme"
+];
+
+</script>
+</body>
+</html>

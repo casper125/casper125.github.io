@@ -1,0 +1,160 @@
+body {
+	font-family: Roboto-Medium, Arial,Helvetica;
+}
+
+#main {
+	width:100%;
+	height:auto;
+}
+
+table {
+	width:100%;
+	margin:0px auto;
+	background:#fff;
+}
+
+th {
+	background-color:#eaeaea;
+	color:#666161;
+	height:25px;
+}
+
+td {
+	border-bottom:1px solid silver;
+	font-size:15px;
+	padding:3px;
+	height:20px;
+}
+#header {
+	text-align:center;
+	color:#fff;
+	background:orange;
+}
+
+a {
+	color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding-top:8px;
+}
+
+<!-- switch box -->
+
+.cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+input.cmn-toggle-round-flat + label {
+  padding: 3px;
+  width: 47px;
+  height: 15px;
+  background-color: #dddddd;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+input.cmn-toggle-round-flat + label:before {
+	 display: block;
+  position: absolute;
+  content: "";
+}
+input.cmn-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+input.cmn-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+input.cmn-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 13px;
+  background-color: silver;
+  border-radius: 45px;
+  transition: margin 0.4s, background 0.4s;
+}
+input.cmn-toggle-round-flat:checked + label {
+  background-color: #5ec117;
+}
+input.cmn-toggle-round-flat:checked + label:after {
+  margin-left: 32px;
+  background-color: #5ec117;
+}
+
+#title {
+	float:left;
+	margin-top:3px;
+	margin-left:10px;
+}
+#switchbox {
+	float:right;
+	margin-right:10px;
+}
+
+#cmn-toggle-0, #cmn-toggle-1,#cmn-toggle-2,#cmn-toggle-5,
+#cmn-toggle-4, #cmn-toggle-3, #cmn-toggle-6, #cmn-toggle-7, #cmn-toggle-8, #cmn-toggle-9, #cmn-toggle-10 {
+	display:none;
+}
+
+/* on and off; button */
+
+#colorrec_on {
+	background:#5ec117;
+	width:15px;
+	height:15px;
+	padding:2px;
+	border-radius: 100px;
+	color:#fff;
+	font-size:10px;
+	text-align: center;
+}
+
+#colorrec_off {
+	background:silver;
+	width:15px;
+	height:15px;
+	padding:2px;
+	border-radius: 100px;
+	color:#fff;
+	font-size:10px;
+	text-align: center;
+}
+
+
+a {
+	text-decoration: none;
+	color:#fff;
+	font-weight:bold;
+	font-size:12px;
+}
+
+.button {
+background:orange;
+color:#fff;
+border-radius:5px;
+width:60px;
+font-size:14px;
+border:none;
+padding:5px;
+}
+
+.button:hover {
+text-decoration:underline;
+}
+

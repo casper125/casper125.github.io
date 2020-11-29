@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Story One + Long Form + Swipe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Link w3's CSS -->
+    <link rel="stylesheet" href="css/w3.css">
+</head>
+
+
+<body class = "w3-container">
+<img src = "images/nyt.png" width="99%" />
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"> <!--slide one -->
+            <img src="images/c2/1.png" width="100%" />
+            </div>
+
+            <div class="swiper-slide"> <!--slide two-->
+            <img src="images/c2/2.png" width="100%" />
+            </div>
+
+            <div class="swiper-slide"><!--slide three-->
+            <img src="images/c2/3.png" width="100%" />
+            </div>
+
+            <div class="swiper-slide"><!--slide four -->
+            <img src="images/c2/4.png" width="100%" />
+            </div>
+
+            <div class="swiper-slide"><!--slide five-->
+            <img src="images/c2/5.png" width="100%" />
+            </div>
+
+            <div class = "swiper-slide"><!--slide six -->
+            <img src="images/c2/6.png" width="100%" />
+            </div>
+
+            <div class="swiper-slide"><!--slide seven-->
+            <img src="images/c2/7.png" width="100%" />
+            </div>
+            
+            <div class="swiper-slide"><!--slide nine -->
+            <p>No amount of mosquito spraying will kill all mosquitoes.</p>
+
+            <button style="background:orange;color:white;border:none;"><a style="text-decoration: none;" href="https://pennstate.qualtrics.com/SE/?SID=SV_9AEv3napfcfloBn">Back to Qualtrics</a></button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: false
+    });
+    </script>
+</body>
+</html>

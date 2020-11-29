@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Condition 1</title>
+
+<!--major style -->
+<link rel="stylesheet" type="text/css" href="css/main1.css" />
+
+<!--google font -->
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<!--parallax scrolling 
+<script type="text/javascript">
+	$(document).ready(function(){
+    $('section[data-type="background"]').each(function(){
+        var $bgobj = $(this); // assigning the object
+     
+        $(window).scroll(function() {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
+             
+            // Put together our final background position
+            var coords = '50% '+ yPos + 'px';
+ 
+            // Move the background
+            $bgobj.css({ backgroundPosition: coords });
+        }); 
+    });    
+});
+
+// Create HTML5 elements for IE
+  
+document.createElement("article");
+document.createElement("section");
+
+</script>
+-->
+
+<!-- one page scroll-->
+<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/scrollIt1.js" type="text/javascript"></script>
+
+
+<script>
+$(function(){
+  $.scrollIt1();
+});
+</script>
+
+<style type="text/css">
+  li {
+    color:#fff;
+    margin-left:30px;
+    }
+    </style>
+
+</head>
+<body>
+
+<header>
+<img src ="img/logo.png" />
+<nav data-scroll-index="0">
+<ul>
+<li>Discover</li>
+<li>Shop</li>
+<li>Apps</li>
+<li>Owners</li>
+</ul>
+</nav>
+</header>
+
+<div id ="breadcrumb">
+    Home > Shop > Wearable Tech > <b>Samsung Gear Fit</b>
+</div>
+
+<!-- section 1 -->
+
+<section id ="first" data-type="background" data-speed="10">
+<article class = "1">
+<h1>Wear It Anywhere</h1>
+<p>
+The Gear Fit was designed to wear not only while you're working out, but for whatever situation you're in, day or night. Its curved display contours comfortably to your wrist, while interchangeable bands provide you with multiple color options.
+</p>
+
+<button><a href ="s2.html" style ="text-decoration:none; color:#fff;">Continue</a></button>
+
+</article> 
+</section>   
+
+<footer>
+Copyright &copy; 1995 - 2014 SMS All Rights Reserved
+</footer>
+
+</body>
+</html>

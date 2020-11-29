@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>Control 4</title>
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />  
+
+<meta name ="author" content ="ruoxu wang" />
+
+<!-- mobile css -->
+
+<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="css/mobile.css" />  
+
+<!-- main css -->
+
+<link rel="stylesheet" href="css/main.css" />
+
+<!--behavior recording -->
+
+<script type="text/javascript">
+    $(function(){
+        $(':checkbox').change(function(e){
+            $.post('url', data, function(result, err){
+                if (err) {
+                    alert("Server failed")
+                }
+            })
+        //  alert(e.target.id + "is clicked");
+        });
+    });
+</script>
+</head>
+<body>
+
+<div id ="main"><!--start of main -->
+<form id="contactForm" method="post" action="redirect_post.php">
+    <input id="starttime" type="hidden" name="starttime" value='<?php echo date("H:i:s"); ?>' />
+    <input id="condition" type="hidden" name="condition" value="3" />
+    <input id="condition" type="hidden" name="ctr_condition" value="4" />
+    <input id="ResponseID_pre" type="hidden" name="ResponseID_pre" value='<?php echo $_GET["ResponseID_pre"]; ?>' />
+<table>
+<tr><th id ="header">Privacy Settings</th></tr>
+
+<tr><td style ="border-bottom:none;">Data used for recommendations</td></tr>
+
+<!-- category 1 -->
+<tr>
+<th>
+
+<div id = "title">
+<img src="images/food.png" width = "20px" height = "20px" />&nbsp; Items in the Fridge 
+</div>
+</th>
+</tr>
+
+<tr>
+<td>Fresh food
+<!-- start of switch box -->
+<div id ="switchbox">
+  <input id="cmn-toggle-1" name="cmn-toggle-1" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" checked>
+  <label for="cmn-toggle-1"></label>
+  </div>
+<!-- end of switch box -->
+</td>
+</tr>
+<tr>
+<td>Expired food
+<!-- start of switch box -->
+<div id ="switchbox">
+  <input id="cmn-toggle-2" name="cmn-toggle-2" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" checked>
+  <label for="cmn-toggle-2"></label>
+  </div>
+<!-- end of switch box -->
+</td>
+</tr>
+<tr>
+<td style ="border-bottom:none;">Leftovers
+<!-- start of switch box -->
+<div id ="switchbox">
+  <input id="cmn-toggle-3" name="cmn-toggle-3" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" checked>
+  <label for="cmn-toggle-3"></label>
+  </div>
+<!-- end of switch box -->
+</td>
+</tr>
+</div>
+
+<!-- category 2 -->
+<tr><th>
+<div id ="title">
+<img src="images/history.png" width = "23px" height = "20px" />&nbsp; Food History
+</div>
+
+</th>
+</tr>
+<tr>
+<td>Food preferences
+<!-- start of switch box -->
+<div id ="switchbox">
+  <input id="cmn-toggle-4" name="cmn-toggle-4" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+  <label for="cmn-toggle-4"></label>
+  </div>
+<!-- end of switch box -->
+</td>
+</tr>
+<tr>
+<td>Food you always eat
+<!-- start of switch box -->
+<div id ="switchbox">
+  <input id="cmn-toggle-5" name="cmn-toggle-5" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+  <label for="cmn-toggle-5"></label>
+  </div>
+<!-- end of switch box -->
+</td>
+</tr>
+<tr>
+<td style = "border-bottom:none;">Food allergies
+<!-- start of switch box -->
+<div id ="switchbox">
+  <input id="cmn-toggle-6" name="cmn-toggle-6" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+  <label for="cmn-toggle-6"></label>
+  </div>
+<!-- end of switch box -->
+</td>
+</tr>
+
+<!-- category 3 -->
+<tr>
+<th>
+<div id = "title">
+<img src="images/health.png" width = "20px" height = "20px" />&nbsp; Health Status  
+</div>
+
+</th>
+</tr>
+<tr>
+<td>Weight
+<!-- start of switch box -->
+<div id ="switchbox">
+  <input id="cmn-toggle-7" name="cmn-toggle-7" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+  <label for="cmn-toggle-7"></label>
+  </div>
+<!-- end of switch box -->
+</td>
+</tr>
+<tr>
+<td>Nutritional needs
+<!-- start of switch box -->
+<div id ="switchbox">
+  <input id="cmn-toggle-8" name="cmn-toggle-8" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+  <label for="cmn-toggle-8"></label>
+  </div>
+<!-- end of switch box -->
+</td>
+</tr>
+<tr>
+<td>Illness
+<!-- start of switch box -->
+<div id ="switchbox">
+  <input id="cmn-toggle-9" name="cmn-toggle-9" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+  <label for="cmn-toggle-9"></label>
+  </div>
+<!-- end of switch box -->
+</td>
+</tr>
+<tr>
+<td>Age
+<!-- start of switch box -->
+<div id ="switchbox">
+  <input id="cmn-toggle-10" name="cmn-toggle-10" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+  <label for="cmn-toggle-10"></label>
+  </div>
+<!-- end of switch box -->
+</td>
+</tr>
+
+</table>
+
+<table>
+<tr>
+<td style ="border-bottom:none;">
+<span style ="font-size:12px;">Allow:</span><img src ="images/on.png" width ="40px" height ="19px" />
+<span style ="font-size:12px;">Decline:</span><img src ="images/off.png" width ="40px" height ="19px" />
+</td>
+</tr>
+
+<tr>
+<td style ="border-bottom:none;">
+	<p style ="font-size:13px;color:#007afe;"><b>TAP</b> buttons to change the settings</p>
+</td>
+</tr>
+</table>
+
+<input disabled style ="float:right; margin-top:-30px;" type="submit" class="button" value="Next" />
+</form>
+
+</div><!-- end of main -->
+
+</body>
+</html>

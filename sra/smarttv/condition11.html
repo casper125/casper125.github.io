@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content ="ruoxu wang">
+<title>Condition 11</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.css" >
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/star.css" />
+<link rel="stylesheet" type="text/css" href="css/switch.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<script> 
+//click Action's dropdown menu --> star rating
+$( document ).ready(function() {
+  // Handler for .ready() called.
+	$('select').change(function(){
+		var G = +($('.ActionG').find(":selected").val());
+		var PG = +($('.ActionPG').find(":selected").val());
+		var PG13 = +($('.ActionPG13').find(":selected").val());
+		value = G + PG + PG13;
+		if (value == 0) {$("#rating6").prop("checked", false);}
+		if (value == 0) {$("#rating7").prop("checked", false);}
+		if (value == 0) {$("#rating8").prop("checked", false);}
+		if (value == 0) {$("#rating9").prop("checked", false);}
+		if (value == 0) {$("#rating10").prop("checked", false);}
+		if (value == 1) {$("#rating6").prop("checked", true);}
+		if (value > 1 && value <= 3) {$("#rating7").prop("checked", true);}
+        if (value > 3 && value <= 5) {$("#rating8").prop("checked", true);}
+        if (value > 5 && value <= 7) {$("#rating9").prop("checked", true);}
+        if (value > 7 && value <=9) {$("#rating10").prop("checked", true);}
+	});
+});
+
+//click Action's dropdown menu --> star rating
+$( document ).ready(function() {
+  // Handler for .ready() called.
+	$('select').change(function(){
+		var G = +($('.DramaG').find(":selected").val());
+		var PG = +($('.DramaPG').find(":selected").val());
+		var PG13 = +($('.DramaPG13').find(":selected").val());
+		value = G + PG + PG13;
+		if (value == 0) {$("#rating11").prop("checked", false);}
+		if (value == 0) {$("#rating12").prop("checked", false);}
+		if (value == 0) {$("#rating13").prop("checked", false);}
+		if (value == 0) {$("#rating14").prop("checked", false);}
+		if (value == 0) {$("#rating15").prop("checked", false);}
+		if (value == 1) {$("#rating11").prop("checked", true);}
+		if (value > 1 && value <= 3) {$("#rating12").prop("checked", true);}
+        if (value > 3 && value <= 5) {$("#rating13").prop("checked", true);}
+        if (value > 5 && value <= 7) {$("#rating14").prop("checked", true);}
+        if (value > 7 && value <=9) {$("#rating15").prop("checked", true);}
+	});
+});
+
+//click Action's dropdown menu --> star rating
+$( document ).ready(function() {
+  // Handler for .ready() called.
+	$('select').change(function(){
+		var G = +($('.ComedyG').find(":selected").val());
+		var PG = +($('.ComedyPG').find(":selected").val());
+		var PG13 = +($('.ComedyPG13').find(":selected").val());
+		value = G + PG + PG13;
+		if (value == 0) {$("#rating16").prop("checked", false);}
+		if (value == 0) {$("#rating17").prop("checked", false);}
+		if (value == 0) {$("#rating18").prop("checked", false);}
+		if (value == 0) {$("#rating19").prop("checked", false);}
+		if (value == 0) {$("#rating20").prop("checked", false);}
+		if (value == 1) {$("#rating16").prop("checked", true);}
+		if (value > 1 && value <= 3) {$("#rating17").prop("checked", true);}
+        if (value > 3 && value <= 5) {$("#rating18").prop("checked", true);}
+        if (value > 5 && value <= 7) {$("#rating19").prop("checked", true);}
+        if (value > 7 && value <=9) {$("#rating20").prop("checked", true);}
+	});
+});
+
+//click Action's dropdown menu --> star rating
+$( document ).ready(function() {
+  // Handler for .ready() called.
+	$('select').change(function(){
+		var G = +($('.AnimationG').find(":selected").val());
+		var PG = +($('.AnimationPG').find(":selected").val());
+		var PG13 = +($('.AnimationPG13').find(":selected").val());
+		value = G + PG + PG13;
+		if (value == 0) {$("#rating21").prop("checked", false);}
+		if (value == 0) {$("#rating22").prop("checked", false);}
+		if (value == 0) {$("#rating23").prop("checked", false);}
+		if (value == 0) {$("#rating24").prop("checked", false);}
+		if (value == 0) {$("#rating25").prop("checked", false);}
+		if (value == 1) {$("#rating21").prop("checked", true);}
+		if (value > 1 && value <= 3) {$("#rating22").prop("checked", true);}
+        if (value > 3 && value <= 5) {$("#rating23").prop("checked", true);}
+        if (value > 5 && value <= 7) {$("#rating24").prop("checked", true);}
+        if (value > 7 && value <=9) {$("#rating25").prop("checked", true);}
+
+	});
+});
+
+//click Action's dropdown menu --> star rating
+$( document ).ready(function() {
+  // Handler for .ready() called.
+	$('select').change(function(){
+		var G = +($('.DocumentaryG').find(":selected").val());
+		var PG = +($('.DocumentaryPG').find(":selected").val());
+		var PG13 = +($('.DocumentaryPG13').find(":selected").val());
+		value = G + PG + PG13;
+		if (value == 0) {$("#rating26").prop("checked", false);}
+		if (value == 0) {$("#rating27").prop("checked", false);}
+		if (value == 0) {$("#rating28").prop("checked", false);}
+		if (value == 0) {$("#rating29").prop("checked", false);}
+		if (value == 0) {$("#rating30").prop("checked", false);}
+		if (value == 1) {$("#rating26").prop("checked", true);}
+		if (value > 1 && value <= 3) {$("#rating27").prop("checked", true);}
+        if (value > 3 && value <= 5) {$("#rating28").prop("checked", true);}
+        if (value > 5 && value <= 7) {$("#rating29").prop("checked", true);}
+        if (value > 7 && value <=9) {$("#rating30").prop("checked", true);}
+	});
+});
+
+</script>
+
+<style>
+.ui-accordion .ui-accordion-content {
+    border-top: 0;
+    height:auto;
+    overflow: hidden;
+    padding:20px;
+}
+</style>
+
+</head>
+<body>
+
+<main>
+
+<form id="contactForm" method="post" action="redirect_post.php">
+    <input id="starttime" type="hidden" name="starttime" value='<?php echo date("H:i:s"); ?>' />
+    <input id="dcondition" type="hidden" name="dcondition" value="11" />
+    <input id="ResponseID_pre" type="hidden" name="ResponseID_pre" value='<?php echo $_GET["ResponseID_pre"]; ?>' />
+
+<!--logo -->
+<table style ="width:100%; margin:0px auto;">
+<tr>
+<td style ="float:left;">
+<img src ="images/logo.png" />
+</td>
+
+<td style ="color:#fff; text-align:center; width:100px;">
+<h4>  
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var month = currentTime.getMonth() + 1
+var day = currentTime.getDate()
+var year = currentTime.getFullYear()
+document.write(month + "/" + day + "/" + year)
+//-->
+</script>
+</h4>
+</td>
+
+<td style ="color:#fff; text-align:center; width:100px;">
+<h4>
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var hours = currentTime.getHours()
+var minutes = currentTime.getMinutes()
+if (minutes < 10){
+minutes = "0" + minutes
+}
+document.write(hours + ":" + minutes + " ")
+if(hours > 11){
+document.write("PM")
+} else {
+document.write("AM")
+}
+//-->
+</script>
+</h4>
+</td>
+
+<td style ="color:#fff; text-align:center; width:100px;">
+<h4>
+80°F
+</h4>
+</td>
+</tr>
+</table>
+<!-- end of logo -->
+
+<!-- Description -->
+<table width ="100%;">
+<tr>
+<td cellpadding ="20" style ="color:#fff;">
+The TV requests access to your program watching data for personalized recommendations.<br /><br />
+Please set your privacy preferences for information disclosure:<br />
+<b><u>None:</u></b> no information at all; <b><u>Low:</u></b> a small amount of information; <b><u>Medium:</u></b> a moderate amount of information; <b><u>High:</u></b> full information.</p>
+</td>
+</tr>
+</table>
+
+<!-- Accordion -->
+<div id="accordion">
+
+<!-- level 1 -->
+    <h3>Action</h3>
+
+	<div style ="padding:40px;">
+
+<table style ="float:right;">
+<tr>
+<td>	
+<h3>Recommendation Accuracy:</h3>
+</td>
+<td>
+<div class="starRating">
+  <div>
+    <div>
+      <div>
+        <div>
+          <input id="rating6" type="radio" name="rating1" value="1" disabled ="disabled">
+          <label for="rating6"><span>1</span></label>
+        </div>
+        <input id="rating7" type="radio" name="rating1" value="2" disabled ="disabled">
+        <label for="rating7"><span>2</span></label>
+      </div>
+      <input id="rating8" type="radio" name="rating1" value="3" disabled ="disabled">
+      <label for="rating8"><span>3</span></label>
+    </div>
+    <input id="rating9" type="radio" name="rating1" value="4" disabled ="disabled">
+    <label for="rating9"><span>4</span></label>
+  </div>
+  <input id="rating10" type="radio" name="rating1" value="5" disabled ="disabled">
+    <label for="rating10"><span>4</span></label>
+  </div>
+</td>
+</tr>
+</table>
+
+	<h3>Program Watching Time</h3>
+
+	<table width ="100%" cellpadding ="10">
+	<tr>
+	<td width ="60%">Daytime (6:00am - 4:30pm)</td>
+	
+	<td>
+	Level of information disclosure:
+	<select class="ActionG" id ="control32" name ="control32">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	<tr>
+	<td>Early Night (4:30pm - 10:00pm)</td> 
+	
+	<td>
+	Level of information disclosure:
+	<select class="ActionPG" id ="control33" name ="control33">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	<tr>
+	<td>Late Night (10:00pm - 2:00am)</td> 
+	
+	<td>
+	Level of information disclosure:
+	<select class="ActionPG13" id ="control34" name ="control34">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+	</table>
+
+	</div>
+
+<!-- level 2 -->
+
+	<h3>Drama</h3>
+	<div style ="padding:40px;">
+
+<table style ="float:right;">
+<tr>
+<td>	
+<h3>Recommendation Accuracy:</h3>
+</td>
+<td>
+<div class="starRating">
+  <div>
+    <div>
+      <div>
+        <div>
+          <input id="rating11" type="radio" name="rating2" value="1" disabled ="disabled">
+          <label for="rating11"><span>1</span></label>
+        </div>
+        <input id="rating12" type="radio" name="rating2" value="2" disabled ="disabled">
+        <label for="rating12"><span>2</span></label>
+      </div>
+      <input id="rating13" type="radio" name="rating2" value="3" disabled ="disabled">
+      <label for="rating13"><span>3</span></label>
+    </div>
+    <input id="rating14" type="radio" name="rating2" value="4" disabled ="disabled">
+    <label for="rating14"><span>4</span></label>
+  </div>
+  <input id="rating15" type="radio" name="rating2" value="5" disabled ="disabled">
+    <label for="rating15"><span>4</span></label>
+  </div>
+</td>
+</tr>
+</table>
+
+	<h3>Program Watching Time</h3>
+
+	<table width ="100%;" cellpadding ="10">
+	<tr>
+	<td width = "60%">Daytime (6:00am - 4:30pm)</td>
+
+	<td>
+	Level of information disclosure:
+	<select class="DramaG" id ="control35" name ="control35">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	<tr>
+	<td>Early Night (4:30pm - 10:00pm)</td> 
+
+	<td>
+	Level of information disclosure:
+	<select class="DramaPG" id ="control36" name ="control36">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	<tr>
+	<td>Late Night (10:00pm - 2:00am)</td> 
+
+	<td>
+	Level of information disclosure:
+	<select class="DramaPG13" id ="control37" name ="control37">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	</table>
+
+		
+	</div>
+
+<!-- level 3 -->
+
+	<h3>Comedy</h3>
+
+	<div style ="padding:40px;">
+
+<table style ="float:right;">
+<tr>
+<td>	
+<h3>Recommendation Accuracy:</h3>
+</td>
+<td>
+<div class="starRating">
+  <div>
+    <div>
+      <div>
+        <div>
+          <input id="rating16" type="radio" name="rating3" value="1" disabled ="disabled">
+          <label for="rating16"><span>1</span></label>
+        </div>
+        <input id="rating17" type="radio" name="rating3" value="2" disabled ="disabled">
+        <label for="rating17"><span>2</span></label>
+      </div>
+      <input id="rating18" type="radio" name="rating3" value="3" disabled ="disabled">
+      <label for="rating18"><span>3</span></label>
+    </div>
+    <input id="rating19" type="radio" name="rating3" value="4" disabled ="disabled">
+    <label for="rating19"><span>4</span></label>
+  </div>
+  <input id="rating20" type="radio" name="rating3" value="5" disabled ="disabled">
+    <label for="rating20"><span>4</span></label>
+  </div>
+</td>
+</tr>
+</table>
+
+	<h3>Program Watching Time</h3>
+
+	<table width ="100%;" cellpadding ="10">
+	<tr>
+	<td width ="60%">Daytime (6:00am - 4:30pm)</td>  
+
+	<td>
+	Level of information disclosure:
+	<select class="ComedyG" id ="control38" name ="control38">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	<tr>
+	<td>Early Night (4:30pm - 10:00pm)</td> 
+
+	<td>
+	Level of information disclosure:
+	<select class="ComedyPG" id ="control39" name ="control39">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	<tr>
+	<td>Late Night (10:00pm - 2:00am)</td> 
+
+	<td>
+	Level of information disclosure:
+	<select class="ComedyPG13" id ="control40" name ="control40">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	</table>
+
+		
+	</div>
+
+<!-- level 4 -->
+
+	<h3>Animation</h3>
+
+<div style ="padding:40px;">
+
+<table style ="float:right;">
+<tr>
+<td>	
+<h3>Recommendation Accuracy:</h3>
+</td>
+<td>
+<div class="starRating">
+  <div>
+    <div>
+      <div>
+        <div>
+          <input id="rating21" type="radio" name="rating4" value="1" disabled ="disabled">
+          <label for="rating21"><span>1</span></label>
+        </div>
+        <input id="rating22" type="radio" name="rating4" value="2" disabled ="disabled">
+        <label for="rating22"><span>2</span></label>
+      </div>
+      <input id="rating23" type="radio" name="rating4" value="3" disabled ="disabled">
+      <label for="rating23"><span>3</span></label>
+    </div>
+    <input id="rating24" type="radio" name="rating4" value="4" disabled ="disabled">
+    <label for="rating24"><span>4</span></label>
+  </div>
+  <input id="rating25" type="radio" name="rating4" value="5" disabled ="disabled">
+    <label for="rating25"><span>4</span></label>
+  </div>
+</td>
+</tr>
+</table>
+
+	<h3>Program Watching Time</h3>
+
+	<table width ="100%" cellpadding ="10">
+	<tr>
+	<td width = "60%">Daytime (6:00am - 4:30pm)</td>
+
+	<td>
+	Level of information disclosure: 
+	<select class="AnimationG" id ="control41" name ="control41">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	<tr>
+	<td>Early Night (4:30pm - 10:00pm)</td>
+
+	<td>
+	Level of information disclosure:
+	<select class="AnimationPG" id ="control42" name ="control42">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	<tr>
+	<td>Late Night (10:00pm - 2:00am)</td>
+
+	<td>
+	Level of information disclosure:
+	<select class="AnimationPG13" id ="control43" name ="control43">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	</table>
+
+		
+	</div>
+
+<!-- level 5 -->
+
+	<h3>Documentary</h3>
+
+	<div style ="padding:40px;">
+
+<table style ="float:right;">
+<tr>
+<td>	
+<h3>Recommendation Accuracy:</h3>
+</td>
+<td>
+<div class="starRating">
+  <div>
+    <div>
+      <div>
+        <div>
+          <input id="rating26" type="radio" name="rating5" value="1" disabled ="disabled">
+          <label for="rating26"><span>1</span></label>
+        </div>
+        <input id="rating27" type="radio" name="rating5" value="2" disabled ="disabled">
+        <label for="rating27"><span>2</span></label>
+      </div>
+      <input id="rating28" type="radio" name="rating5" value="3" disabled ="disabled">
+      <label for="rating28"><span>3</span></label>
+    </div>
+    <input id="rating29" type="radio" name="rating5" value="4" disabled ="disabled">
+    <label for="rating29"><span>4</span></label>
+  </div>
+  <input id="rating30" type="radio" name="rating5" value="5" disabled ="disabled">
+    <label for="rating30"><span>4</span></label>
+  </div>
+</td>
+</tr>
+</table>
+
+	<h3>Program Watching Time</h3>
+		
+	<table width ="100%;" cellpadding ="10">
+	<tr>
+	<td width ="60%">Daytime (6:00am - 4:30pm)</td>
+
+	<td>
+	Level of information disclosure: 
+	<select class="DocumentaryG" id ="control44" name ="control44">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	<tr>
+	<td>Early Night (4:30pm - 10:00pm)</td>
+
+	<td>
+	Level of information disclosure: 
+	<select class="DocumentaryPG" id ="control45" name ="control45">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	<tr>
+	<td>Late Night (10:00pm - 2:00am)</td>
+
+	<td>
+	Level of information disclosure: 
+	<select class="DocumentaryPG13" id ="control46" name ="control46">
+	<option value ="0">None</option>
+	<option value ="1">Low</option>
+	<option value ="2">Median</option>
+	<option value ="3">High</option>
+	</select>
+	</td>
+
+	</tr>
+
+	</table>
+	</div>
+</div>
+
+<input disabled style ="float:right; margin-top:20px; background:#2779aa; color:#fff; font-weight:bold; width:100px; height:40px; font-size:16px; border:none; border-radius: 5px;" type="submit" class="button" value="Next" />
+
+</form>
+
+</main>
+
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+<script>
+
+$( "#accordion" ).accordion();
+
+var availableTags = [
+	"ActionScript",
+	"AppleScript",
+	"Asp",
+	"BASIC",
+	"C",
+	"C++",
+	"Clojure",
+	"COBOL",
+	"ColdFusion",
+	"Erlang",
+	"Fortran",
+	"Groovy",
+	"Haskell",
+	"Java",
+	"JavaScript",
+	"Lisp",
+	"Perl",
+	"PHP",
+	"Python",
+	"Ruby",
+	"Scala",
+	"Scheme"
+];
+
+</script>
+</body>
+</html>
